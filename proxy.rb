@@ -11,7 +11,7 @@ class Proxy < Sinatra::Base
 
   # Takes one parameter, url
   get '/' do
-    headers 'Access-Control-Allow-Origin: ' => '*'
+    headers 'Access-Control-Allow-Origin' => '*'
 
     url = URI.parse(params[:url])
     # The servers it is OK to fetch from
